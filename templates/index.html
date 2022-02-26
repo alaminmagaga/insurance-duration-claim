@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html >
+<!--From https://codepen.io/frytyler/pen/EGdtg-->
+<head>
+  <meta charset="UTF-8">
+  <title>ML API</title>
+  
+  <link rel="stylesheet"  href="{{ url_for('static', filename='w3.css') }}">
+ <style type="text/css">
+    
+ 
+  </style>
+</head>
+
+<body>
+
+<div class='w3-padding w3-teal w3-center'><h1>insurance model</h1></div>
+  
+  
+    <form class="w3-container w3-card-2" action="{{ url_for('duration')}}" method="POST" style="width: 100%">
+  <h2 class="w3-text-blue w3-center w3-text-teal" >Input Form</h2>
+  <p>      
+  <label class="w3-text-teal"><b>Gender</b></label>
+  <select name="Gender"  class="w3-select w3-border w3-round-large"  style="width:40%" required="required">
+            <option value="Male">Male</option>
+            <option value="Female">Female</option>      
+   </select> 
+  </p>
+  
+  <p>
+  <label class="w3-text-teal"><b>Age</b></label>
+  <input id="id1" class="w3-input w3-border" name="Age" type="number"  required="required"></p>
+  <p>      
+  <label class="w3-text-teal"><b>No Pol</b></label>
+  <input id="id1" class="w3-input w3-border" name="No_Pol" type="number" required="required"></p>
+ 
+  <label class="w3-text-teal"><b>Car Category</b></label>
+  <select name="Car_Category"  class="w3-select w3-border w3-round-large"  style="width:40%" required="required">
+            <option value="Saloon">Saloon</option>
+            <option value="JEEP">Toyota</option>
+            <option value="Honda">Honda</option>
+            <option value="Truck">Truck</option>
+            <option value="Mini Bus">Mini Bus</option>
+            <option value="Pick Up">Pick Up</option>
+            <option value="Wagon">Wagon</option>
+            <option value="Motorcycle">Motorcycle</option>
+            <option value="Shape Of Vehicle Chasis">Shape Of Vehicle Chasis</option>
+            <option value="Station 4 Wheel">Station 4 Wheel</option>
+            <option value="Pick Up > 3 Tons">Pick Up > 3 Tons</option>
+            <option value="CAMRY CAR HIRE">CAMRY CAR HIRE</option>
+            <option value="Tipper Truck">Tipper Truck</option>
+    
+          </select>
+  <p>      
+  <label class="w3-text-teal"><b>Subject_Car_Make</b></label>
+   <input id="id1" class="w3-input w3-border" name="Subject_Car_Make"  type="number" required="required"></p>
+          
+    
+  <p>      
+  <label class="w3-text-teal"><b>State</b></label>
+  <select name="State"  class="w3-select w3-border w3-round-large"  style="width:40%" required="required">
+            <option value="Abia">Abia</option>
+            <option value="Adamawa">Adamawa</option>
+            <option value="Akwa Ibom">Akwa ibom</option>
+            <option value="Anambra">Anambra</option>
+            <option value="Bauchi">Bauchi</option>
+            <option value="Bayelsa">Bayelsa</option>
+            <option value="Benue">Benue</option>
+            <option value="Borno">Borno</option>
+            <option value="Cross River">Cross River</option>
+            <option value="Delta">Delta</option>
+            <option value="Ebonyi">Ebonyi</option>
+            <option value="Edo">Edo</option>
+            <option value="Ekiti">Ekiti</option>
+            <option value="Enugu">Enugu</option>
+            <option value="Gombe">Gombe</option>
+            <option value="Imo">Imo</option>
+            <option value="Jigawa">Jigawa</option>
+            <option value="Kaduna">Kaduna</option>
+            <option value="Kano">Kano</option>
+            <option value="Katsina">Katsina</option>
+            <option value="Kebbi">Kebbi</option>
+            <option value="Kogi">Kogi</option>
+            <option value="Kwara">Kwara</option>
+            <option value="Lagos">Lagos</option>
+            <option value="Nasarawa">Nasarawa</option>
+            <option value="Niger">Niger</option>
+            <option value="Ogun">Ogun</option>
+            <option value="Ondo">Ondo</option>
+            <option value="Osun">Osun</option>
+            <option value="Oyo">Oyo</option>
+            <option value="Plateau">Plateau</option>
+            <option value="Rivers">Rivers</option>
+            <option value="Sokoto">Sokoto</option>
+            <option value="Taraba">Taraba</option>
+            <option value="Yobe">Yobe</option>
+            <option value="Osun">Osun</option>
+            <option value="Zamfara">Zamfara</option>
+            <option value="Abuja">Abuja</option>
+    
+          </select>
+ 
+         
+  <p>      
+  <label class="w3-text-teal"><b>Product Name</b></label>
+  <select name="ProductName"  class="w3-select w3-border w3-round-large"  style="width:40%" required="required">
+            <option value="Car Classic">Car Classic</option>
+            <option value="CarSafe">CarSafe</option>
+            <option value="Customized Motor">Customized Motor</option>
+            <option value="Car Plus">Car Plus</option>
+            <option value="CVTP">CVTP</option>
+            <option value="CarFlex">CarFlex</option>
+            <option value="Muuve">Muuveagon</option>
+            <option value="Motor Cycle">Motor Cycle</option>
+          </select>
+  <p>      
+  <label class="w3-text-teal"><b>Transaction Year</b></label>
+  <input id="id1" class="w3-input w3-border" name="Transaction Year"  type="number" required="required"></p>
+  
+  <p>      
+  <label class="w3-text-teal"><b>Policy Start Year</b></label>
+  <input id="id1" class="w3-input w3-border" name="Policy Start Year"  type="number" required="required"></p>
+  
+  <p>      
+  <label class="w3-text-teal"><b>Policy End Year</b></label>
+  <input id="id1" class="w3-input w3-border" name="Policy End Year"  type="number" required="required"></p>
+  
+  
+  <button onclick="myFunction()" type="submit" class="btn btn-primary btn-block btn-large w3-text-teal w3-border-teal" style="width:100%;">Predict</button> 
+   <br></form>
+   
+   
+</body>
+</html>
