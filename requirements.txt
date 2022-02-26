@@ -1,5 +1,6 @@
 Flask
 catboost
+xgboost
 gunicorn
 itsdangerous
 Jinja2
